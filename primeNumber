@@ -1,0 +1,31 @@
+/* Online Java Compiler and Editor */
+public class HelloWorld{
+    
+    public static boolean checkPrime(int n) {
+    
+        if(n==1 || n==0) {
+            return false;
+        }
+        if(n==2 ){
+            return true;
+        }
+        for(int i=3;i<n/2;i++){
+            if(n%i==0) {
+                return false;
+            }  
+        }
+        return true;
+    }
+     public static void main(String []args){
+       int number= 10;
+       System.out.println(checkPrime(number));
+       
+     }
+}
+
+
+
+
+// Iterative way to find out number is prime number or not
+// What is prime number the number which is divisible by itself or 1
+// it means number%number==0 and number%1==0 than it is the prime number
