@@ -42,4 +42,25 @@ public class HelloWorld{
      }
 }
 
+ // Second Approach
+ 
+ /* Online Java Compiler and Editor */
+public class HelloWorld{
+
+     public static void main(String []args){
+         // Another approach
+    int n= 12;
+    int m =24;
+    while(n!m){
+        if(n>m) {
+            n= n-m;
+            // n-=m
+        } else {
+            m= m-n;
+             m-=n
+        }
+    }
+    Syetm.out.println(n);
+     }
+
 
