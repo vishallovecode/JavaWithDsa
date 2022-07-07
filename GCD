@@ -44,7 +44,7 @@ public class HelloWorld{
 
  // Second Approach
  
- /* Online Java Compiler and Editor */
+ /* Online Java Compiler and Editor */ this code will not work in ediotr this is just simple pseudo code 
 public class HelloWorld{
 
      public static void main(String []args){
