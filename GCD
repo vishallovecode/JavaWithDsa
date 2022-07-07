@@ -1,0 +1,45 @@
+/* Online Java Compiler and Editor */
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+        // Creating the instance of Scanner class here
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please Enter the first number");
+        
+        // Taking input integer from user and stroing into the first varibale 
+        int first = sc.nextInt();
+         System.out.println("Please Enter the Second number");
+         
+         // Taking input integer from user and stroing into the second variable 
+        int second = sc.nextInt();
+        
+        // We need to find gcd that we know any number which is highest divisor of both number is gcd
+        // divisor is which gives you the remainder  when you divide some number with it
+        // checking remainder you can use modular operator
+        // I have one number n and want to divide that number with p and want check whether n is divisble by p or not if divisible p is divisor of n if( n%p == 0) it means p is the divisor of n
+        // first check the number and store somwhere
+        
+        int min = first>second ? second: first;
+      
+    //   if(first>second) {
+    //      min = second
+    //   } else {
+    //       min= first
+    //   }
+
+        int max_divisor =0;
+        for(int i=1;i<=min;i++) {
+            if(first%i==0 && second%i==0) {
+                max_divisor=i;
+            }
+        }
+   System.out.println("GCD OF TWO NUMBER IS: "+ max_divisor );
+        
+// lest discuss time complexity program 
+// O(min(first, second))
+
+     }
+}
+
+
