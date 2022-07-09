@@ -1,0 +1,54 @@
+import java.util.Arrays;
+
+
+// Seive  algortihm for prime number
+public class PrimeNumber{
+
+    public static void printPrimeNumber(boolean array []) {
+        for(int j=0;j<=array.length;j++) {
+            if(array[j]==true) {
+           System.out.println("tHIS IS THE PRIME NUMBER:" + j); 
+            }
+           }
+    }
+    public static void seiveErathosis (boolean array [] , int number) {
+        Arrays.fill(array, true);
+        array[0]=false;
+        array[1]= false;
+        for(int i=2;i<=4;i++){
+         for(int k=2*i;k<=number;k+=i) { 
+             array[k]= false;
+         }
+        }
+    }
+    public static void main(String []args){
+   int number  = 17;
+   boolean array[]= new boolean[number+1]; 
+   seiveErathosis(array , number);
+   printPrimeNumber(array);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
