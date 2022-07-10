@@ -1,0 +1,78 @@
+public class stringbasic {
+
+    public static void main(String[] args) {
+        // String s = "newton";
+        // String s1 = "newcedc";
+        // String s2 = "cdfvdfvfg";
+        // System.out.println(Integer.toHexString(s.hashCode())); // find refernce
+        // System.out.println(Integer.toHexString(s1.hashCode())); // find refernce
+        // s1= "Willitwokr";
+        // String p = "Willitwokr";
+        // System.out.println(s);
+        // System.out.println(Integer.toHexString(s1.hashCode()));
+
+        // // another way to create string
+        // String sc= new String("hello");
+        // String p1 = new String("hello");
+        // p1 ="visjal";
+        // System.out.println(p1);
+        // System.out.println(sc);
+
+        // charAt and length()
+
+        String learnCode = " string is a very important ";
+        // Find the number of space
+        String s = learnCode.trim();
+        int countspace = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == ' ') {
+                countspace++;
+            }
+        }
+        System.out.println(countspace); // 4
+
+        // trim method it removes the last and first emptyn space
+        System.out.println(learnCode.trim());
+        // Replace
+        System.out.println(learnCode.replace(' ', ','));
+        // toLowerCase
+        System.out.println(learnCode.toLowerCase());
+
+        // toUpperCase
+        System.out.println(learnCode.toUpperCase());
+
+        // indexOf
+        System.out.println(learnCode.indexOf('s', 2));
+
+        // substring
+        System.out.println(learnCode.substring(2, 5));
+
+        String ss = "visjal";
+
+        String CONCATSRING = ss.concat("sharma");
+        System.out.println(CONCATSRING);
+
+        // Methods
+        // charAt => particular
+        // length =>
+        // substring =>
+        // concat =>
+        // indexOf =>
+        // toLowerCase
+        // toUpperCase
+        // trim
+        // split
+        // equalIgnoreCase
+        // replace
+        // equal
+        // isEmpty
+        // toCharArray
+    }
+}
+// immutable
+// In Java What is string
+// Different way to create string
+// What is the meaning of string literal
+// what is mean by string immutable
+// String pool constant heap
+// Pool heap
