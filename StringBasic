@@ -1,0 +1,30 @@
+public class stringbasic {
+
+    public static void main(String[] args) {
+        String s = "newton";  
+        String s1  = "newcedc";
+        String s2 = "cdfvdfvfg";
+        System.out.println(Integer.toHexString(s.hashCode())); // find refernce
+        System.out.println(Integer.toHexString(s1.hashCode())); // find refernce
+       s1= "Willitwokr";
+       String p = "Willitwokr";
+       System.out.println(s);
+       System.out.println(Integer.toHexString(s1.hashCode()));
+
+
+       // another way to create string
+       String sc=  new String("hello");
+       String p1 = new String("hello");
+       p1 ="visjal";
+       System.out.println(p1);
+       System.out.println(sc);
+        
+    }
+}
+ //immutable 
+//  In Java What is string 
+//  Different  way to create string
+//  What is the meaning of string literal
+//  what is mean by string immutable
+//  String pool constant heap
+//  Pool heap
