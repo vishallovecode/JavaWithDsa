@@ -1,0 +1,29 @@
+public class GCD {
+
+
+    public static int  gcd(int a , int b) {
+        // if(a%b==0) {
+        //     return b;
+        // }
+
+        // if(b%a==0) {
+        //     return a;
+        // }
+        if(b==0) {
+            return a;
+        }
+        return gcd(b, a%b);
+    }
+    public static void main(String[] args) {
+      int a = 12;
+      int sum_of_gcd = 0;
+        for(int i=1;i<a;i++) {
+            sum_of_gcd = sum_of_gcd+ gcd(i,a);
+        }
+        System.out.println(sum_of_gcd);
+    }
+}
+
+
+
+
