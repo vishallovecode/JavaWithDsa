@@ -1,0 +1,51 @@
+import java.util.Arrays;
+
+public class BasicProgram {
+
+    // String ether = "Newton School ether";
+        public static int getVowelsCount (String p) {
+            int countVowels = 0;
+            String s = p.toLowerCase();
+            for(int i=0;i<s.length();i++) {
+                if(s.charAt(i)== 'i' || s.charAt(i)=='o' || s.charAt(i)=='a' || s.charAt(i)=='u' || s.charAt(i)=='e' ) {
+                    countVowels++;
+                }
+            }
+           return countVowels;
+        }
+        // toUpperCase and toLowerCase
+        // charAt()=> will return character
+        // toString convert into the
+    public static void main(String[] args) {
+       String a = "Vishal";
+       String b ="Vishal";
+       a= "Vishal1";
+       System.out.println(b); // Vishal
+
+       // Convert Array into string
+       // Arrays package
+       int array []= {1,2,3,4,5};
+       System.out.println(array);   // this will give me the memory location where is is stored
+       // to String method convert value into the string
+       String s = Arrays.toString(array);
+       System.out.println(s); // data type
+
+       // checking data Type
+       System.out.println(s.getClass().getName()); // java.lang.String
+       System.out.println(s.getClass().getSimpleName()); // String
+
+      // Convert Integer into the string
+       int b1 =10; // Integer
+       System.out.println("DATAtYPE "+ Integer.toString(b1).getClass().getSimpleName());
+       String st = Integer.toString(b1);
+       System.out.println(st.getClass().getSimpleName()); 
+
+       // 
+       char aaa = 'o';
+       System.out.println("capital: "+ Character.toString(aaa).toUpperCase());
+
+   String ether = "NEwton School ether";
+  int count  = getVowelsCount(ether);
+  System.out.println("count vowels:" +count);
+    }
+}
