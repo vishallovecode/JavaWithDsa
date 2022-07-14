@@ -1,0 +1,46 @@
+import java.util.Arrays;
+
+public class BasicProgram {
+
+
+    // count character
+    // Newton 0 index 
+    public static int countCharacter (String s , char ch) {
+        int count  = 0;
+        for(int i=0;i<s.length();i++) {
+        if(s.charAt(i) == Character.toLowerCase(ch) ) {
+            count++;
+        }
+        }
+        return count;
+    } 
+  public static void main(String[] args) {
+      // String data type which is used to store the data that data should be text
+      // if enclosed any anything between double quoted symbol that is string
+     // How to decalre the string
+
+   
+
+     // anything between the '' it will consider that as a character  => character should be one
+    // print and println method only except  string or integrer array
+     System.out.println();
+   // plus operator in string
+   // it will concatenate two string or you can say it will add two string into the single string
+  
+   // I want to calculate the how many type particular character present in given string
+
+   String variableName = "Newton";
+   System.out.println("What are you doing : " +variableName);
+   // calling count character Method ignore cases
+
+   int a = countCharacter(variableName.toLowerCase() , 'n');
+   System.out.println("Count of character: " + a);
+
+  }
+
+}
+
+
+
+
+
