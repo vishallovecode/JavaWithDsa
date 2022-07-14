@@ -1,0 +1,52 @@
+import java.util.Arrays;
+
+public class BasicProgram {
+
+
+ public static String reverseString(String s) {
+    String result = "";
+    // starting with first index
+    // for(int i =0;i<s.length();i++) {
+    //     result  = s.charAt(i)+result;
+    // }
+
+    // starting with last index
+    for(int i = s.length()-1; i>=0;i--) {
+        result  = result+s.charAt(i);
+    }
+    return result;
+ }
+
+  public static void main(String[] args) {
+    // convert string into the  array use split method
+  String sentence = "If you learn you will grow can take some to understand";
+  String array  [] = sentence.split(" ");
+  int countOfWord =  array.length;
+  System.out.println("countOfWord "+countOfWord);
+  System.out.println(Arrays.toString(array));
+ 
+
+  // Converting string into the array of character
+  char character [ ] = sentence.toCharArray();
+
+   // Reverse String
+    String s = "a";
+    s = "b"+s; // ba
+    s = "c"+s; //cba
+
+  }
+
+}
+
+// we can convert given string into the array
+// split(string s)
+
+
+
+
+
+
+
+
+
+
