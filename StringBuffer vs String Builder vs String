@@ -1,0 +1,66 @@
+public class StringBuilders {
+  
+    
+    public static void main(String[] args) {
+        // decalring StringBuilder 
+        StringBuilder sb = new StringBuilder("Vishal");
+        System.out.println(sb); 
+      // Performance perspective we use StringBuilder 
+
+      // Append or add string into the end of string
+      sb.append(" Sharma");
+      System.out.println(sb);
+      
+      //  finding the value in given index
+      System.out.println("Sb Value at 0 index:" +sb.charAt(0));
+
+      //setting the value into given index
+     sb.setCharAt(0, 'B');
+     System.out.println("Value after setCharAt: "+ sb);
+
+     // insert particular value in given index without replacing value
+     sb.insert(4, 'a');
+     System.out.println("Value after insert: "+ sb);
+
+     // delete value from startIndex to endIndex
+     sb.delete(3,6);
+     System.out.println(sb);
+
+     // Reverse a given string 
+     StringBuilder sb1 = new StringBuilder("Newton");
+    //  System.out.println("Reverse a given string:" + sb1.reverse());
+
+     // finding the index of given value
+     System.out.println(sb1.indexOf("N")); 
+
+     // replace  string
+     StringBuilder sb2 = new StringBuilder("hallo I am fine 112"); 
+
+   // finding the current capacity of string
+   // by default capacity of stringbuilder is 16 
+   StringBuilder sb3 = new StringBuilder("h"); 
+   int capacity =  sb3.length()+16;
+   System.out.println("capacity=>: "+sb3.capacity() + "==" + capacity);
+    }
+}
+
+
+// Why StringBuilder why not string ??
+// When to use String class and when to use  Stringbuilder
+// When to use StringBuilder and when to use StringBuffer
+
+// IF there is less modification in array than go for the String class else go for StringBuilder or StringBuffer
+// Synchronized and another non-synchronized  
+// String Builder and String Buffer stored in heap memory 
+
+// String S = new Strin("heloo"); // heap memory
+// String s = "Hello"; constant pool
+// 99.999% 
+// Difference b/w the string builder and String buffer
+
+// String Builder is faster as compare to string buffer and string
+// String Builder and String is non-synchronized
+//String Buffer Synchronized
+// When there is not modification in String go for String Class
+// If there is modification and you want faster performance go for StringBuilder
+// If you want thread safe and synchronized things than go for string buffer
