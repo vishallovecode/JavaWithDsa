@@ -32,6 +32,8 @@ public class StringBuilders {
 
      // finding the index of given value
      System.out.println(sb1.indexOf("N")); 
+     
+     
 
      // replace  string
      StringBuilder sb2 = new StringBuilder("hallo I am fine 112"); 
@@ -64,3 +66,4 @@ public class StringBuilders {
 // When there is not modification in String go for String Class
 // If there is modification and you want faster performance go for StringBuilder
 // If you want thread safe and synchronized things than go for string buffer
+//What is the difference between str1 == str2 and str1.equals(str2)?
