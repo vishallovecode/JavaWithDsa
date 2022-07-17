@@ -12,21 +12,37 @@ public class TwoPointer {
             }
         }
 
-        // Two pointer approach optimize way time complexity 0(n^2)
+        // Two pointer approach optimize way time complexity 0(n)
         int start=0;
         int end= array.length-1;
         while(start<=end) {
             if(start==end) {
-                System.out.println("Not Found");
+                System.out.println("Not Found"); 
+                break;
             }
             if(array[start]+array[end]>k) {
                 end--;
             } else if(array[start]+array[end]<k) {
                 start++;
             } else {
-                System.out.println("we found the indices"+ start+ "," + end);
+                // sum mil jaye 
+                System.out.println("we found the indices "+ start+ "," + end);
+                break;
             }
         }
+   // Break example
+    //    int k1=100;
+    //     while(k>0) {
+    //         if(k1==99) {
+    //             break;
+    //         }
+    //         System.out.println(k1);
+    //         k1--;
+    //     }
 
     }
 }
+
+
+
+
