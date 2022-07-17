@@ -1,0 +1,32 @@
+public class TwoPointer {
+    public static void main(String[] args) {
+        int array [] =  {6,7,8,9,12,13,14,15};
+        int k = 27;
+
+        // Brute force approach
+        for(int i=0;i<array.length;i++) {
+            for(int j= i+1;j<array.length-1;j++) {
+                if(array[i]+array[j] == k) {
+                    System.out.println("indices found"+ i +j);
+                }
+            }
+        }
+
+        // Two pointer approach optimize way time complexity 0(n^2)
+        int start=0;
+        int end= array.length-1;
+        while(start<=end) {
+            if(start==end) {
+                System.out.println("Not Found");
+            }
+            if(array[start]+array[end]>k) {
+                end--;
+            } else if(array[start]+array[end]<k) {
+                start++;
+            } else {
+                System.out.println("we found the indices"+ start+ "," + end);
+            }
+        }
+
+    }
+}
