@@ -1,0 +1,22 @@
+import java.util.Arrays;
+
+public class reverseStringTwoPointer {
+    public static void reverse(char array []){
+        int start=0;
+        int end= array.length-1;
+        while(start<end) {
+           char temp = array[start];
+           array[start++]= array[end];
+           array[end--]= temp;
+        }
+    }
+    public static void main(String[] args) {
+        String s = "Newton";
+        char arrayC []= s.toCharArray();
+        reverse(arrayC);
+        System.out.println(arrayC);
+        String s1  = new String(arrayC);
+        System.out.println(s1);
+    
+    }
+}
