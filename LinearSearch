@@ -1,0 +1,25 @@
+public class LinearSearch {
+
+    public static int linerSearch (int array[] , int k) {
+        int index = -1;
+        for(int i=0;i<array.length;i++) {
+            if(k == array[i])  {
+                index = i;
+            }
+        }
+       return index;
+    }
+    public static void main(String[] args) {
+        int array  [] =  {9,11,12,13,41,56,78,43}; 
+
+        // find the index of k th element in given array
+        int targetIndex = linerSearch(array , 121);
+        if(targetIndex==-1) {
+         System.out.println("Element not found");
+        } else {
+            System.out.println("Element found at index: " +targetIndex);
+        }
+        
+
+    }
+}
