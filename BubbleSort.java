@@ -23,7 +23,7 @@ public class BubbleSort {
                 }
             }
         }
-        // System.out.println(Arrays.toString(array)); // online data type
+        // System.out.println(Arrays.toString(array)); // This is converting array into string 
         printMyArray(array);
     }
 }
