@@ -1,0 +1,92 @@
+import { useState } from "react";
+import { fetchMovieAvailability, fetchMovieList } from "./api";
+import "./styles.css";
+
+export default function App() {
+  const [data, setData] = useState([]);
+  const [availability, setAvailibility] = useState([]);
+
+  const fetchAvailability = (movie) => {
+    fetchMovieAvailability(movie)
+      .then((res) => {
+        // aupdateObject(res);
+        aupdateObject(res);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const aupdateObject = (available) => {
+    let data = [];
+    for (let i = 1; i <= 24; i++) {
+      if (available.indexOf(i) == -1) {
+        data.push({
+          [i]: true
+        });
+      } else {
+        data.push({
+          [i]: false
+        });
+      }
+    }
+    console.log(data);
+    setAvailibility(data);
+  };
+
+  // const updateArray = (available)=>{
+  //   let data = [];
+  //   for (let i = 1; i <= 24; i++) {
+  //     if (available.indexOf(i) == -1) {
+  //       data.push(true , i)
+  //     } else {
+  //      data.push(false , i)
+  //     }
+  //   }
+  // }
+
+  fetchMovieList()
+    .then((res) => {
+      setData(res);
+      console.log(res);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+
+  return (
+    <div className="App">
+      <div className="main">
+        {data.map((item) => {
+          return (
+            <div className="container">
+              <img src={item.imgUrl} className="img" />
+              <a href="#" onClick={() => fetchAvailability(item.name)}>
+                {item.name}
+              </a>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="box">
+        {availability?.map((item, index) => {
+          return (
+            <div>
+              {/* {item[index + 1] ? (
+                <div style={{ backgroundColor: "red" }}>{index + 1}</div>
+              ) : (
+                <div style={{ backgroundColor: "blue" }}>{index + 1}</div>
+              )} */}
+              <div className={item[index + 1] ? "blue" : "green"}>
+                {index + 1}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// Movie list
