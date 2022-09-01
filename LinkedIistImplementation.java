@@ -13,11 +13,9 @@ public class LinkedList {
     }
 
     // Adding node into the first postion of linkde list
+    // t.n 0(1)
     public void addFirst(int data) {
         Node node = new Node(data);
-        // if(head == null) {
-        // head = node;
-        // }
         node.next = head;
         head = node;
     }
@@ -32,7 +30,7 @@ public class LinkedList {
         System.out.println();
 
     }
-
+        // t.n  0(n)
     public void addLast(int data) {
         Node node = new Node(data);
         // if the linked list is null
@@ -45,7 +43,7 @@ public class LinkedList {
         }
         currNode.next = node;
     }
-
+    // t.n 0(1)
     public void removeFirst() {
         if (head == null) {
             return;
@@ -53,9 +51,28 @@ public class LinkedList {
         head = head.next;
 
     }
-public void removeLast () {
-    // Home Work
-}
+
+    // Remove Last Element form the linked list
+
+  // t.c 0(n)
+    public void removeLast() {
+        // Home Work
+
+        if (head == null) {
+            return;
+        }
+        if (head.next == null) {
+            head = null;
+        }
+        Node prev = head;
+        Node nextNode = head.next;
+        while (nextNode.next != null) {
+            prev = prev.next;
+            nextNode = nextNode.next;
+        }
+        prev.next = null;
+    }
+
     public static void main(String[] args) {
         LinkedList li = new LinkedList();
         li.addFirst(34);
@@ -64,14 +81,17 @@ public void removeLast () {
         li.addFirst(100);
         li.addLast(60);
         li.DisplayValue();
-        li.removeFirst();
+        li.removeLast();
         li.DisplayValue();
 
     }
 }
 
-// AddNode in first position of linked list
-// AddNode in the last Position of linked list
+// Linked list last element
+// Reverse Linked List
+// 1-2-3-4 linked list
+// tail
+
+// DoublyLinked List
 
 //
-
