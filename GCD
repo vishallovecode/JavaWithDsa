@@ -62,5 +62,10 @@ public class HelloWorld{
     }
     Syetm.out.println(n);
      }
+     
+     // recursive gcd
+     public static void gcd(int a, int b){
+          return (b == 0) ? a : gcd(b, a % b);
+     }
 
 
